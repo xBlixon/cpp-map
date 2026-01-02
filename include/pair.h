@@ -8,8 +8,8 @@ private:
     V value;
 
 public:
-    pair(K k, V v) : key(k), value(v) {};
+    pair(K k, V v);
 };
 
-
+#include "pair.tpp"
 #endif //MAP_PAIR_H
