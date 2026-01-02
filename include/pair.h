@@ -4,11 +4,14 @@
 template <typename K, typename V>
 class pair {
 private:
-    K key;
-    V value;
+    K _key;
+    V _value;
 
 public:
     pair(K k, V v);
+
+    K key();
+    V value();
 };
 
 #include "pair.tpp"
