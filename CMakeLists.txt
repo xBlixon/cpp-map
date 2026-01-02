@@ -10,13 +10,14 @@ add_library(MapLib)
 target_sources(MapLib
         PRIVATE
             include/map.cpp
-
+            include/pair.cpp
         PUBLIC
             FILE_SET HEADERS
             BASE_DIRS
                 include
             FILES
                 include/map.h
+                include/pair.h
 )
 
 target_link_libraries(map
