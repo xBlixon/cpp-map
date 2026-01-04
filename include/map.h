@@ -8,4 +8,5 @@ class map {
 
 void hello(const std::string &name);
 
+#include "map.tpp"
 #endif //MAP_MAP_H

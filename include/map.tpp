@@ -1,4 +1,4 @@
-#include "map.h"
+#pragma once
 #include "pair.h"
 
 #include <iostream>

@@ -1,3 +1,4 @@
+#pragma once
 template <typename K, typename V>
 pair<K, V>::pair(K k, V v) : _key(k), _value(v) {};
 
