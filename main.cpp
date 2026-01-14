@@ -1,9 +1,13 @@
 #include <iostream>
-
 #include "include/map.h"
 
 int main() {
-    map<int, int> lol;
-    lol.insert(1, 1);
+    map<char, int> lol;
+    lol.insert('b', 67);
+    lol.remove('b');
+    auto b = lol.find('b');
+    if (b) {
+        std::cout<<b.value()<<std::endl;
+    }
     return 0;
 }

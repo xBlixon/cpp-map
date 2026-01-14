@@ -11,8 +11,9 @@ private:
 
 public:
     map();
+    pair<K, V> find(K key);
     void insert(K key, V value);
-    pair<K, V> *find(K key);
+    void remove(K key);
 };
 
 #include "map.tpp"

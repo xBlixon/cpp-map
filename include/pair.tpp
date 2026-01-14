@@ -15,6 +15,21 @@ V pair<K, V>::value() {
 }
 
 template<typename K, typename V>
-unsigned int pair<K, V>::score() {
+unsigned int pair<K, V>::score() const {
     return score_traits<K>::get(this->_key);
+}
+
+template<typename K, typename V>
+void pair<K, V>::_setExists(bool tf) {
+    _doesExist = tf;
+}
+
+template<typename K, typename V>
+bool pair<K, V>::exists() {
+    return _doesExist;
+}
+
+template<typename K, typename V>
+pair<K, V>::operator bool() const {
+    return _doesExist;
 }

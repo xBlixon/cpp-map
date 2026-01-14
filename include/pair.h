@@ -6,13 +6,18 @@ class pair {
 private:
     K _key;
     V _value;
+    bool _doesExist = true;
 
 public:
     pair(K k, V v);
 
     K key();
     V value();
-    unsigned int score();
+    unsigned int score() const;
+    void _setExists(bool tf);
+    bool exists();
+
+    explicit operator bool() const;
 };
 
 #include "pair.tpp"
