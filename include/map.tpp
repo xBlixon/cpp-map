@@ -1,11 +1,14 @@
 #pragma once
 #include "pair.h"
+#include "Node.h"
 
 #include <iostream>
 #include <ostream>
 
-void hello(const std::string &name) {
-    std::cout << "Hello " << name << "!" << std::endl;
+template<class K, class V>
+map<K, V>::map() = default;
 
-    pair<int, int> p(5, 6);
+template<class K, class V>
+void map<K, V>::insert(K key, V value) {
+    store.insert(pair<K, V>(key, value));
 }

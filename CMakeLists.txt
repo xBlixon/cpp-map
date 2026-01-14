@@ -3,6 +3,8 @@ project(map)
 
 set(CMAKE_CXX_STANDARD 20)
 
+add_subdirectory(Red-Black-Tree-Cpp)
+
 add_library(MapLib INTERFACE)
 
 target_sources(MapLib
@@ -16,7 +18,10 @@ target_sources(MapLib
             FILES
         include/map.h
         include/pair.h
+        include/score_traits.h
 )
+
+target_link_libraries(MapLib INTERFACE RedBlackTreeLibrary)
 
 add_executable(map main.cpp)
 

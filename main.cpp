@@ -3,7 +3,7 @@
 #include "include/map.h"
 
 int main() {
-
-    hello("World");
+    map<int, int> lol;
+    lol.insert(1, 1);
     return 0;
 }

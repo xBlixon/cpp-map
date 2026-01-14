@@ -12,6 +12,7 @@ public:
 
     K key();
     V value();
+    unsigned int score();
 };
 
 #include "pair.tpp"
