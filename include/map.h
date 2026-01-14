@@ -12,6 +12,7 @@ private:
 public:
     map();
     void insert(K key, V value);
+    pair<K, V> *find(K key);
 };
 
 #include "map.tpp"
