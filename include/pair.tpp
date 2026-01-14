@@ -5,12 +5,12 @@ template <typename K, typename V>
 pair<K, V>::pair(K k, V v) : _key(k), _value(v) {};
 
 template<typename K, typename V>
-K pair<K, V>::key() {
+K pair<K, V>::key() const {
     return _key;
 }
 
 template<typename K, typename V>
-V pair<K, V>::value() {
+V pair<K, V>::value() const {
     return _value;
 }
 

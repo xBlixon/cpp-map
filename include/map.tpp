@@ -3,7 +3,9 @@
 #include "Node.h"
 
 #include <iostream>
-#include <ostream>
+#include <string>
+#include <fstream>
+#include "string_traits.h"
 
 template<class K, class V>
 map<K, V>::map() = default;
@@ -30,4 +32,33 @@ template<class K, class V>
 void map<K, V>::remove(K key) {
     auto temp = pair<K, V>(key, V());
     store.remove(temp);
+}
+
+template<class K, class V>
+void map<K, V>::toFile(const std::string& file) {
+    if (!store._getRoot()) {
+        std::cerr << "Empty map.\n";
+        exit(1);
+    }
+
+    std::ofstream output(file);
+    if (!output) {
+        std::cerr << "Couldn't open file ( " << file << " )\n";
+        exit(1);
+    }
+
+    toFileSubtree(store._getRoot(), output);
+
+    output.close();
+}
+
+template<class K, class V>
+void map<K, V>::toFileSubtree(Node<pair<K, V> > *node, std::ofstream &stream) {
+    if (node->left) {
+        toFileSubtree(node->left, stream); // Print left subtree
+    }
+    stream << string_traits<pair<K, V>>::stringify(node->value) << std::endl; // Print parent of subtrees (left, right)
+    if (node->right) {
+        toFileSubtree(node->right, stream); // Print right subtree
+    }
 }

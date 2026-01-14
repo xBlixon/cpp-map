@@ -5,7 +5,8 @@ set(CMAKE_CXX_STANDARD 20)
 
 add_subdirectory(Red-Black-Tree-Cpp)
 
-add_library(MapLib INTERFACE)
+add_library(MapLib INTERFACE
+        include/string_traits.h)
 
 target_sources(MapLib
         PRIVATE

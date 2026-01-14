@@ -9,11 +9,13 @@ class map {
 private:
     RedBlackTree<pair<K, V>> store;
 
+    void toFileSubtree(Node<pair<K,V>> *node, std::ofstream &stream);
 public:
     map();
     pair<K, V> find(K key);
     void insert(K key, V value);
     void remove(K key);
+    void toFile(const std::string& file);
 };
 
 #include "map.tpp"

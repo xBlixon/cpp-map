@@ -11,8 +11,8 @@ private:
 public:
     pair(K k, V v);
 
-    K key();
-    V value();
+    K key() const;
+    V value() const;
     unsigned int score() const;
     void _setExists(bool tf);
     bool exists();
