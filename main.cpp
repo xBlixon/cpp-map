@@ -28,6 +28,6 @@ int main() {
         std::cout<< pair.second << " : " << pair.first << std::endl;
     }
 
-    myMap.toFile("Your Path here");
+    // myMap.toFile("Your Path here");
     return 0;
 }
