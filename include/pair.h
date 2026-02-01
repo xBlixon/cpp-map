@@ -4,11 +4,10 @@
 template <typename K, typename V>
 class pair {
 private:
-    K _key;
-    V _value;
     bool _doesExist = true;
-
 public:
+    const K first;
+    V second;
     pair(K k, V v);
 
     K key() const;

@@ -16,6 +16,11 @@ public:
     void insert(K key, V value);
     void remove(K key);
     void toFile(const std::string& file);
+
+    using iterator = Iterator<pair<K, V>>;
+    iterator begin();
+    iterator end();
+    void erase(iterator it);
 };
 
 #include "map.tpp"

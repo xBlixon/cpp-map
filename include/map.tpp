@@ -62,3 +62,18 @@ void map<K, V>::toFileSubtree(Node<pair<K, V> > *node, std::ofstream &stream) {
         toFileSubtree(node->right, stream); // Print right subtree
     }
 }
+
+template<class K, class V>
+map<K, V>::iterator map<K, V>::begin() {
+    return store.begin();
+}
+
+template<class K, class V>
+map<K, V>::iterator map<K, V>::end() {
+    return store.end();
+}
+
+template<class K, class V>
+void map<K, V>::erase(iterator it) {
+    store.erase(it);
+}
