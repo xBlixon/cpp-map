@@ -20,17 +20,17 @@ The second purpose is to be able to access the value given some key.
 The value part is just to store some value accessed via the key.
 
 ## Usage
-As said earlier this project uses separate repository to do its entire logic.
-That said before one can use it, the Red-Black Tree repository must be cloned
-to the root directory of this project.
-
-While being in the root directory of the project execute:
-```
-git clone https://github.com/xBlixon/Red-Black-Tree-Cpp.git
-```
-This is so that the CMake can bind the Tree project with the Map project.
-
-After that you're ready to try the library on your own!
+> [!IMPORTANT]
+> As said earlier this project uses separate repository to do its entire logic.
+> That said before one can use it, the Red-Black Tree repository must be cloned
+> to the root directory of this project.
+> While being in the root directory of the project execute:
+> ```
+> git clone https://github.com/xBlixon/Red-Black-Tree-Cpp.git
+> ```
+> This is so that the CMake can bind the Tree project with the Map project.
+> 
+> After that you're ready to try the library on your own!
 
 ### Creating map
 ```c++
@@ -42,7 +42,10 @@ map<keyType, valueType> myMap();
 ```c++
 myMap.insert(key, value);
 ```
-The key and the value can be virtually any type as long as its [implemented](#implementing-custom-types).
+> [!NOTE]
+> The key and the value can be virtually any type as long as its [implemented](#implementing-custom-types).
+> 
+> By the default types `char`, `int` and `std::string` are fully supported and `bool` for serialization.
 
 ### Removing values
 ```c++
@@ -134,8 +137,11 @@ struct string_traits<YOUR CUSTOM TYPE HERE> {
     }
 };
 ```
-While it is recommened to use both traits in separate files. Just for the purpose of testing
-the library in local environment, I suggest trying it within the existing files: `score_traits.h` and `string_traits.h`.
+> [!TIP]
+> While it is recommened to use both traits in separate files. Just for the purpose of testing
+> the library in local environment, I suggest trying it within the existing files: `score_traits.h` and `string_traits.h`.
+>
+> Thats where you can also see how the 3 basic types are implemented.
 
 ---
 #### &copy; 2026 Xawier Słupik - Licensed under MIT License
