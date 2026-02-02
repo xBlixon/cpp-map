@@ -1,5 +1,5 @@
 # Ordered Map
-This is a final project for Fundamentals of Computer Programming course at the [Silesian University of Technology](https://www.polsl.pl/en/) for the third semester 2025/2026 of Informatics.
+This is a final project for Computer Programming course at the [Silesian University of Technology](https://www.polsl.pl/en/) for the third semester 2025/2026 of Informatics.
 
 ---
 ## About
